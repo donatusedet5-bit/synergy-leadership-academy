@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="The Synergy Leadership Academy">
+<meta property="og:description" content="Building leaders. Sharing stories. Transforming lives. Register as a volunteer, partner or supporter.">
+<meta property="og:image" content="img/slide-1.jpg">
+<meta name="theme-color" content="#0B1A3C">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>The Synergy Leadership Academy</title>
+<meta name="description" content="Join The Synergy Leadership Academy as a volunteer, partner or supporter. Register in two minutes and send your details by WhatsApp or email.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap">
+<style>
+/* Split hero (copy left, auto-scrolling photo wall right, full bleed) → facts band → about (statement + photo) → departments → Director → recognition → how to join → registration → FAQ → closing → footer. Geist only. Solid colours, no gradients, tight corners. */
+:root{
+  --navy:#0B1A3C;
+  --navy-2:#132655;
+  --navy-3:#1C3370;
+  --red:#C0151F;
+  --red-dk:#9E1018;
+  --red-soft:#FF6B70;
+  --paper:#F4F6FA;
+  --line:#E3E7EF;
+  --line-2:#CDD3E0;
+  --muted:#5B657C;
+  --on-navy:#AEB8D1;
+  --ok:#137A47;
+  --font:"Geist", ui-sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --gut:max(20px, calc((100vw - 1240px) / 2 + 20px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:#fff;color:var(--navy);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#fff}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3{font-weight:600;letter-spacing:-.04em;line-height:1.02;text-wrap:balance}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.tag::before{content:"";width:20px;height:2px;background:currentColor}
+.sec{padding-block:clamp(84px,10vw,136px)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.head .l{display:flex;flex-direction:column;gap:18px}
+.head h2{font-size:clamp(2.2rem,1.3rem + 3.2vw,3.8rem);letter-spacing:-.05em;line-height:.98}
+.head p{color:var(--muted);font-size:clamp(1rem,.95rem + .3vw,1.18rem);max-width:48ch}
+.head.center{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
+.head.center p{margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15.5px/1 var(--font);letter-spacing:-.01em;text-decoration:none;border:0;cursor:pointer;border-radius:8px;padding:17px 24px;transition:background .2s,color .2s,transform .25s var(--ease),box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn .arr{display:inline-block;transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dk)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-3)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:#E8EBF2}
+.btn-line{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1px var(--line-2)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn-line-w{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.btn-line-w:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.btn-sm{padding:12px 18px;font-size:14px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
+.nav .brand img{height:42px;width:auto}
+.nav-links{display:flex;gap:32px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{transform:scaleX(1)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:clamp(640px,calc(100svh - 67px),860px);border-bottom:1px solid var(--line)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:26px;padding:56px 56px 56px var(--gut);min-width:0}
+.badge{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:6px 12px 6px 6px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-weight:500}
+.badge b{background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:4px 8px;border-radius:5px}
+.hero h1{font-size:clamp(2.8rem,1.2rem + 3.9vw,5rem);letter-spacing:-.06em;line-height:.93}
+.hero h1 .r{color:var(--red);display:block}
+.hero-copy > p{font-size:clamp(1.05rem,1rem + .35vw,1.22rem);color:var(--muted);max-width:44ch;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--line);max-width:520px}
+.avs{display:flex;flex:none}
+.avs img,.avs .more{width:42px;height:42px;border-radius:50%;border:2.5px solid #fff;margin-left:-12px;object-fit:cover;background:var(--paper)}
+.avs img:first-child{margin-left:0}
+.avs .more{background:var(--navy);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.proof p{font-size:14px;line-height:1.45;color:var(--muted)}
+.proof b{color:var(--navy);font-weight:600}
+
+.wall{position:relative;overflow:hidden;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 10px;min-width:0;height:100%}
+.col{position:relative;overflow:hidden;min-width:0}
+.track{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:10px;animation:up 46s linear infinite}
+.col.down .track{animation-name:down;animation-duration:54s}
+.wall:hover .track{animation-play-state:paused}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 5px))}}
+@keyframes down{from{transform:translateY(calc(-50% - 5px))}to{transform:translateY(0)}}
+.tile{position:relative;margin:0;overflow:hidden;border-radius:6px;background:var(--navy-2)}
+.tile img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.tile:hover img{transform:scale(1.04)}
+.tile figcaption{position:absolute;left:8px;bottom:8px;background:#fff;color:var(--navy);font-size:12px;font-weight:600;padding:5px 8px;border-radius:4px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s var(--ease)}
+.tile:hover figcaption{opacity:1;transform:none}
+.wall-label{position:absolute;right:16px;bottom:16px;z-index:2;background:var(--red);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:8px 12px;border-radius:6px;display:flex;align-items:center;gap:8px}
+.wall-label i{width:7px;height:7px;background:#fff;border-radius:50%}
+.rise{animation:rise .9s var(--ease) both}
+.d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* Facts band */
+.band{background:var(--navy);color:#fff}
+.band .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.band .wrap > div{padding:36px 28px;border-left:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px}
+.band .wrap > div:first-child{border-left:0;padding-left:0}
+.band b{font-size:clamp(2rem,1.4rem + 2vw,3rem);font-weight:600;letter-spacing:-.05em;line-height:1}
+.band b sup{font-size:.45em;color:var(--red-soft);margin-left:2px;vertical-align:top;position:relative;top:.25em}
+.band span{font-size:14px;color:var(--on-navy)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:16px}
+.story{background:var(--navy);color:#fff;border-radius:10px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-width:0}
+.story .tag{color:var(--red-soft)}
+.story h3{font-size:clamp(1.9rem,1.2rem + 2.4vw,3.1rem);letter-spacing:-.05em;line-height:1.02;max-width:17ch}
+.story h3 em{font-style:normal;color:var(--red-soft)}
+.story p{color:var(--on-navy);font-size:17px;max-width:46ch}
+.verbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14)}
+.verbs span{padding:16px 0 0;font-size:15px;font-weight:500;display:flex;flex-direction:column;gap:4px}
+.verbs span small{font-size:12px;color:var(--red-soft);font-weight:600;font-variant-numeric:tabular-nums}
+.pic{position:relative;border-radius:10px;overflow:hidden;min-height:420px;margin:0}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pic figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:#fff;border-radius:8px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.pic figcaption b{font-size:15px;font-weight:600;display:block}
+.pic figcaption span{font-size:13px;color:var(--muted)}
+.values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+.val{border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:12px;transition:border-color .3s,transform .35s var(--ease)}
+.val:hover{border-color:var(--navy);transform:translateY(-3px)}
+.val .ic{width:44px;height:44px;border-radius:8px;background:var(--paper);display:grid;place-items:center;color:var(--red)}
+.val h3{font-size:19px;letter-spacing:-.03em}
+.val p{font-size:15px;color:var(--muted);line-height:1.55}
+
+/* Departments */
+.depts-sec{background:var(--paper)}
+.dgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.dcard{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px;border-radius:10px;background:#fff;border:1px solid var(--line);text-align:left;font:inherit;color:inherit;cursor:pointer;overflow:hidden;transition:transform .35s var(--ease),border-color .25s,background .3s,color .3s}
+.dcard .no{font-size:13px;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums;transition:color .3s}
+.dcard .nm{font-size:17.5px;font-weight:600;letter-spacing:-.02em;line-height:1.25}
+.dcard .go{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:7px;display:grid;place-items:center;background:var(--paper);transition:background .3s,transform .35s var(--ease),color .3s}
+.dcard:hover{transform:translateY(-4px);background:var(--navy);color:#fff;border-color:var(--navy)}
+.dcard:hover .no{color:var(--red-soft)}
+.dcard:hover .go{background:var(--red);color:#fff;transform:rotate(-45deg)}
+.dcard.picked{border-color:var(--red);box-shadow:0 0 0 3px rgba(192,21,31,.14)}
+.dcta{grid-column:span 3;border-radius:10px;padding:26px 30px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.dcta b{font-size:22px;font-weight:600;letter-spacing:-.03em;display:block}
+.dcta span{color:var(--on-navy);font-size:15px}
+
+/* Director */
+.dir{background:var(--navy);color:#fff}
+.dir .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.dphoto{position:relative;margin:0}
+.dphoto .ph{border-radius:10px;overflow:hidden;aspect-ratio:4/5}
+.dphoto .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform 1.4s var(--ease)}
+.dphoto:hover .ph img{transform:scale(1.03)}
+.dphoto .sig{position:absolute;left:16px;right:16px;bottom:16px;background:#fff;color:var(--navy);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:14px}
+.dphoto .sig .ic{width:40px;height:40px;border-radius:7px;background:#FFF0F0;display:grid;place-items:center;flex:none}
+.dphoto .sig b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.dphoto .sig span{display:block;font-size:12.5px;color:var(--muted);line-height:1.35}
+.dtext{display:flex;flex-direction:column;gap:24px;min-width:0}
+.dtext .tag{color:var(--red-soft)}
+.dtext h2{font-size:clamp(2.7rem,1.5rem + 4.2vw,5rem);letter-spacing:-.06em;line-height:.93}
+.droles{display:flex;flex-wrap:wrap;gap:8px}
+.droles span{padding:7px 12px;border-radius:6px;font-size:14px;font-weight:500;border:1px solid rgba(255,255,255,.2)}
+.dtext .lead{font-size:18px;color:#D5DBEA;max-width:54ch;line-height:1.6}
+.dquote{border-left:3px solid var(--red-soft);padding:4px 0 4px 22px}
+.dquote p{font-size:clamp(1.2rem,1rem + .7vw,1.55rem);letter-spacing:-.025em;line-height:1.38}
+.dfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.dfacts div{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:3px}
+.dfacts div + div{padding-left:16px;border-left:1px solid rgba(255,255,255,.14)}
+.dfacts span{font-size:12.5px;color:var(--on-navy)}
+.dfacts b{font-size:15px;font-weight:500;line-height:1.35}
+details.bio summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:10px;font-weight:500}
+details.bio summary::-webkit-details-marker{display:none}
+details.bio summary .pm{width:26px;height:26px;border-radius:6px;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center}
+details.bio summary .pm svg{transition:transform .35s var(--ease)}
+details.bio[open] summary .pm svg{transform:rotate(45deg)}
+details.bio .body{display:grid;gap:14px;margin-top:16px;color:#C6CEE0;font-size:15.5px;max-width:60ch}
+.dcta-row{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.dcta-row small{font-size:14px;color:var(--on-navy)}
+
+/* Recognition */
+.rgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.rcard{margin:0;display:flex;flex-direction:column;gap:14px}
+.rcard .im{border-radius:10px;overflow:hidden;aspect-ratio:4/3.4;background:var(--paper)}
+.rcard .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.rcard:hover .im img{transform:scale(1.04)}
+.rcard figcaption{display:flex;flex-direction:column;gap:4px;padding-top:2px;border-top:2px solid var(--navy);padding-top:14px}
+.rcard figcaption small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.rcard figcaption b{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.3}
+.rcard figcaption span{font-size:14px;color:var(--muted);line-height:1.45}
+.rcard.big{grid-column:span 2}
+.rcard.big .im{aspect-ratio:16/10.2}
+.rcard.big figcaption b{font-size:21px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.st{padding:34px;display:flex;flex-direction:column;gap:14px;position:relative;background:#fff;transition:background .3s}
+.st + .st{border-left:1px solid var(--line)}
+.st:hover{background:var(--paper)}
+.st .n{font-size:56px;font-weight:600;letter-spacing:-.06em;line-height:.9;color:var(--line-2);font-variant-numeric:tabular-nums;transition:color .3s}
+.st:hover .n{color:var(--red)}
+.st h3{font-size:21px;letter-spacing:-.03em}
+.st p{color:var(--muted);font-size:15.5px}
+
+/* Register */
+.reg{background:var(--paper)}
+.reg .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:start}
+.reg-side{position:sticky;top:100px;display:flex;flex-direction:column;gap:22px}
+.reg-side h2{font-size:clamp(2.2rem,1.3rem + 3vw,3.5rem);letter-spacing:-.05em}
+.reg-side > p{color:var(--muted);font-size:17px;max-width:42ch}
+.reg-contact{display:grid;gap:10px;margin-top:6px}
+.cl{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:10px;background:#fff;border:1px solid var(--line);min-width:0}
+.cl .ic{width:40px;height:40px;border-radius:8px;background:var(--paper);display:grid;place-items:center;flex:none;color:var(--navy)}
+.cl .t{min-width:0;flex:1}
+.cl .t span{display:block;font-size:12.5px;color:var(--muted)}
+.cl .t b{display:block;font-size:14.5px;font-weight:600;word-break:break-all;user-select:all}
+.ghost{background:var(--paper);border:0;font:600 13px var(--font);color:var(--navy);cursor:pointer;padding:8px 12px;border-radius:6px;flex:none;transition:background .2s,color .2s}
+.ghost:hover{background:var(--navy);color:#fff}
+.form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(22px,3vw,36px)}
+.form-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.form-top b{font-size:20px;font-weight:600;letter-spacing:-.03em}
+.form-top span{font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.meter{height:3px;background:var(--paper);margin-bottom:28px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--red);transition:width .6s var(--ease)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.f{display:flex;flex-direction:column;gap:7px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label,.f .lbl{font-size:14px;font-weight:500}
+.f .opt{color:var(--muted);font-weight:400}
+.f input,.f select,.f textarea{width:100%;font:400 15.5px/1.4 var(--font);color:var(--navy);background:var(--paper);border:1px solid transparent;border-radius:8px;padding:14px 15px;transition:border-color .2s,box-shadow .2s,background .2s;appearance:none;-webkit-appearance:none}
+.f textarea{min-height:80px;resize:vertical}
+.f select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230B1A3C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.f input::placeholder,.f textarea::placeholder{color:#99A1B4}
+.f input:hover,.f select:hover,.f textarea:hover{border-color:#D3D9E5}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;background:#fff;border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,26,60,.08)}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:var(--red);background:#FFF8F8}
+.err{font-size:13px;color:var(--red);font-weight:500}
+.err:empty{display:none}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:8px;background:var(--paper);border:1px solid transparent}
+.seg input,.chan input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg label{display:flex;justify-content:center;align-items:center;padding:10px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:500;color:var(--muted);transition:background .25s,color .2s,box-shadow .25s}
+.seg input:checked+label{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(11,26,60,.12)}
+.seg input:focus-visible+label,.chan input:focus-visible+label{outline:2px solid var(--red);outline-offset:2px}
+.f.bad .seg{border-color:var(--red)}
+.chan-h{margin:26px 0 10px;font-size:14px;font-weight:500}
+.chan{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chan label{display:flex;align-items:center;gap:12px;padding:14px;border-radius:8px;border:1.5px solid var(--line);cursor:pointer;transition:border-color .2s,background .2s}
+.chan label .ic{width:36px;height:36px;border-radius:6px;display:grid;place-items:center;background:var(--paper);flex:none;transition:background .2s,color .2s}
+.chan label .ic svg{width:19px;height:19px}
+.chan label b{display:block;font-size:15px;font-weight:600}
+.chan label small{display:block;font-size:12.5px;color:var(--muted);line-height:1.3}
+.chan input:checked+label{border-color:var(--navy);background:#FAFBFD}
+.chan input:checked+label .ic{background:var(--navy);color:#fff}
+.send{display:grid;gap:10px;margin-top:22px}
+.send .btn{width:100%;padding:18px;font-size:16px}
+.send-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.note{text-align:center;font-size:13.5px;color:var(--muted)}
+details.pv{margin-top:16px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+details.pv summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:13px 16px;font-size:14px;font-weight:500}
+details.pv summary::-webkit-details-marker{display:none}
+details.pv summary .chev{transition:transform .3s var(--ease)}
+details.pv[open] summary .chev{transform:rotate(180deg)}
+.pv-body{padding:0 16px 16px;display:grid;gap:10px}
+.bubble{background:var(--paper);border-radius:2px 8px 8px 8px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;font-size:14px;line-height:1.6}
+.bubble .ph{color:#A0A8BA}
+.pv-body .row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.alert{margin-top:14px;padding:12px 14px;border-radius:8px;background:#FFF2F2;color:var(--red);font-size:14px;font-weight:500;text-align:center}
+.done{margin-top:14px;padding:18px;border-radius:8px;background:#F0FAF4;border:1px solid #CBEAD8;display:grid;gap:8px;animation:rise .5s var(--ease) both}
+.done b{color:var(--ok);font-weight:600}
+.done ol{margin:0;padding-left:20px;font-size:14.5px;display:grid;gap:3px}
+
+/* FAQ */
+.faq .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
+.faq-side{display:flex;flex-direction:column;gap:18px;position:sticky;top:100px}
+.faq-side h2{font-size:clamp(2.2rem,1.3rem + 3vw,3.5rem);letter-spacing:-.05em}
+.faq-side p{color:var(--muted);font-size:17px;max-width:38ch}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-size:clamp(1.05rem,1rem + .3vw,1.22rem);font-weight:600;letter-spacing:-.02em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{width:32px;height:32px;border-radius:7px;border:1px solid var(--line-2);display:grid;place-items:center;flex:none;transition:background .25s,color .25s,border-color .25s}
+.qa summary .pm svg{transition:transform .35s var(--ease)}
+.qa[open] summary .pm{background:var(--navy);color:#fff;border-color:var(--navy)}
+.qa[open] summary .pm svg{transform:rotate(45deg)}
+.qa summary:hover .pm{border-color:var(--navy)}
+.qa .a{padding:0 52px 26px 0;color:var(--muted);font-size:16px;line-height:1.65;max-width:62ch}
+
+/* Closing */
+.closing{padding-block:0 clamp(70px,9vw,110px)}
+.cbox{border-radius:12px;background:var(--red);color:#fff;padding:clamp(44px,7vw,88px) clamp(24px,5vw,72px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:end}
+.cbox .tag{color:#fff}
+.cbox h2{font-size:clamp(2.4rem,1.3rem + 4.4vw,5rem);letter-spacing:-.06em;line-height:.93;margin-top:18px;max-width:13ch}
+.cbox p{color:#FFE1E2;font-size:17px;margin-bottom:24px;max-width:40ch}
+.cbox .row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Footer */
+.foot{background:var(--navy);color:var(--on-navy);font-size:14.5px}
+.foot .wrap{padding-block:60px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.foot .logo{height:54px;width:auto;margin-bottom:16px}
+.foot h4{margin:0 0 12px;color:#fff;font-size:14px;font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.foot .copy{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+.foot .brk{word-break:break-all}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:8px;font-weight:500;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s,transform .35s var(--ease);z-index:80;max-width:calc(100% - 40px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Responsive */
+@media (max-width:1100px){
+  .dgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dcta{grid-column:span 2}
+  .values{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-copy{padding-right:36px}
+}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-copy{padding:48px max(20px,env(safe-area-inset-right,0px)) 48px max(20px,env(safe-area-inset-left,0px))}
+  .wall{height:480px}
+  .head{grid-template-columns:minmax(0,1fr)}
+  .about-grid,.dir .wrap,.reg .wrap,.faq .wrap,.cbox{grid-template-columns:minmax(0,1fr)}
+  .pic{min-height:360px}
+  .reg-side,.faq-side{position:static}
+  .band .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .band .wrap > div:nth-child(3){border-left:0;padding-left:0}
+  .band .wrap > div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .st + .st{border-left:0;border-top:1px solid var(--line)}
+  .dphoto{max-width:540px}
+  .foot .wrap{grid-template-columns:1fr 1fr}
+  .foot .wrap > div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .nav .brand img{height:34px}
+  .dgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dcta{grid-column:span 2}
+  .dcard{min-height:130px;padding:18px}
+  .dcard .nm{font-size:15.5px}
+  .values,.rgrid{grid-template-columns:minmax(0,1fr)}
+  .rcard.big{grid-column:auto}
+  .grid2,.chan,.send-row{grid-template-columns:minmax(0,1fr)}
+  .dfacts{grid-template-columns:minmax(0,1fr)}
+  .dfacts div + div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .verbs{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:12px}
+  .hero-cta .btn{flex:1 1 auto}
+  .wall{height:420px}
+  .band .wrap > div{padding:26px 16px}
+  .qa .a{padding-right:0}
+  .foot .wrap{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .dgrid{grid-template-columns:minmax(0,1fr)}
+  .dcta{grid-column:auto}
+  .dcard{min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;padding:16px 60px 16px 16px}
+  .dcard .go{top:50%;transform:translateY(-50%)}
+  .dcard:hover .go{transform:translateY(-50%) rotate(-45deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0} img{max-width:100%}</style>
+</head>
+<body>
+
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Synergy Leadership Academy home"><img src="img/logo.png" alt="The Synergy Leadership Academy" width="520" height="223"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#departments">Departments</a>
+      <a href="#director">The Director</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-navy btn-sm" href="#register">Join the academy</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero-copy">
+      <span class="badge rise d1"><b>New</b>The Synergy is now an academy</span>
+      <h1 id="h1" class="rise d2">Building leaders. Sharing stories. <span class="r">Transforming lives.</span></h1>
+      <p class="rise d3">A community where stories, culture, knowledge and achievements are explored, taught, documented and shared with people around the globe. We're calling on volunteers, partners and supporters to help build it.</p>
+      <div class="hero-cta rise d4">
+        <a class="btn btn-red" href="#register">Become a volunteer <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#departments">See the departments</a>
+      </div>
+      <div class="proof rise d5">
+        <div class="avs" aria-hidden="true"><img src="img/face-1.jpg" alt="" width="42" height="42"><img src="img/face-2.jpg" alt="" width="42" height="42"><img src="img/face-3.jpg" alt="" width="42" height="42"><img src="img/face-4.jpg" alt="" width="42" height="42"><span class="more">+</span></div>
+        <p><b>Open to everyone.</b> Students, graduates, professionals and entrepreneurs. No experience required.</p>
+      </div>
+    </div>
+
+    <div class="wall" aria-label="Photos from The Synergy events">
+      <div class="col"><div class="track" id="trackA"></div></div>
+      <div class="col down"><div class="track" id="trackB"></div></div>
+      <span class="wall-label"><i></i>Moments from The Synergy</span>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section class="band" aria-label="Key facts">
+    <div class="wrap">
+      <div><b>13</b><span>Departments to serve in</span></div>
+      <div><b>2<sup>min</sup></b><span>To register online</span></div>
+      <div><b>0</b><span>Experience required to join</span></div>
+      <div><b>1</b><span>Shared vision for leadership</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about" aria-labelledby="ab">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag">About the academy</span><h2 id="ab">More than a movement. A community, a vision, a legacy.</h2></div>
+        <p>The Synergy has always been a movement and a way of life. Now it's becoming an academy, a new chapter for everyone who believes in what it stands for.</p>
+      </div>
+      <div class="about-grid">
+        <article class="story">
+          <span class="tag">Our story</span>
+          <h3>The Synergy is not just a name. It is a <em>movement</em>, a community and a way of life.</h3>
+          <p>Stories, life experiences, culture, knowledge and shared achievements will be explored, taught, documented and shared with people around the globe.</p>
+          <div class="verbs"><span><small>01</small>Explore</span><span><small>02</small>Teach</span><span><small>03</small>Document</span><span><small>04</small>Share</span></div>
+        </article>
+        <figure class="pic">
+          <img src="img/community.jpg" alt="Young people listening attentively at a Synergy event" width="1080" height="720">
+          <figcaption><span><b>Our community</b><span>Learning, connecting and growing together</span></span></figcaption>
+        </figure>
+      </div>
+      <div class="values">
+        <div class="val"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 7v5c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V7l-8-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Leadership</h3><p>Leading through service, responsibility and the ability to inspire others.</p></div>
+        <div class="val"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19 10 13l4 4 6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9h5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Personal growth</h3><p>Helping people become better versions of themselves.</p></div>
+        <div class="val"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h11l3 3v13H5V4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10h6M9 14h6M9 18h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Stories</h3><p>Preserving the experiences and culture that shape us.</p></div>
+        <div class="val"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 19c.8-3 2.8-4.5 5-4.5s4.2 1.5 5 4.5M13 15.3c1-.5 2-.8 3.5-.8 2.2 0 4.2 1.5 5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Connection</h3><p>Celebrating achievements and creating opportunities to learn and grow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS -->
+  <section class="sec depts-sec" id="departments" aria-labelledby="dp">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag">Where you can serve</span><h2 id="dp">Pick your department</h2></div>
+        <p>The academy runs through 13 departments. Tap one and it's added to your registration automatically.</p>
+      </div>
+      <div class="dgrid" id="dgrid"></div>
+    </div>
+  </section>
+
+  <!-- DIRECTOR -->
+  <section class="sec dir" id="director" aria-labelledby="dn">
+    <div class="wrap">
+      <figure class="dphoto">
+        <div class="ph"><img src="img/director.jpg" alt="Mfehe-Abasi Ekpe, Director of The Synergy Leadership Academy" width="720" height="1080" loading="lazy"></div>
+        <figcaption class="sig">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9" r="6" stroke="#C0151F" stroke-width="2"/><path d="m8.5 13.5-1.5 8 5-2.5 5 2.5-1.5-8" stroke="#C0151F" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <span><b>Most Outstanding Departmental President of the Year</b><span>Students' Union Government, Akwa Ibom State University</span></span>
+        </figcaption>
+      </figure>
+      <div class="dtext">
+        <span class="tag">Meet the Director</span>
+        <h2 id="dn">Mfehe-Abasi Ekpe</h2>
+        <div class="droles"><span>Director, The Synergy Leadership Academy</span><span>CEO, Excel Pips Academy</span></div>
+        <p class="lead">A Philosophy graduate from Akwa Ibom State, he is a market analyst, entrepreneur, motivational speaker, singer and business consultant, passionate about leadership, financial education and human empowerment.</p>
+        <div class="dquote"><p>Everyone has a story worth sharing, a potential worth developing, and a contribution worth making to society.</p></div>
+        <div class="dfacts">
+          <div><span>Education</span><b>Graduate of Philosophy</b></div>
+          <div><span>Student leadership</span><b>Former President, NAPS, AKSU</b></div>
+          <div><span>Believes in</span><b>Lifelong learning</b></div>
+        </div>
+        <details class="bio">
+          <summary><span class="pm" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Read the full biography</summary>
+          <div class="body">
+            <p>Mfehe-Abasi Ekpe is an indigene of Akwa Ibom State, Nigeria, a graduate of Philosophy, market analyst, entrepreneur, leader, motivational speaker, singer and business consultant. He is the CEO of Excel Pips Academy and the Director of The Synergy Leadership Academy, two platforms through which he pursues financial education, personal development, leadership and the empowerment of individuals. He is also learning graphic design to broaden his creative skills.</p>
+            <p>As a philosopher, he believes in critical thinking, rational inquiry and continuous learning, and that personal growth begins with the willingness to question, learn, unlearn and improve. For him, true leadership is shown through service, responsibility, influence and the ability to inspire others.</p>
+            <p>As President of the National Association of Philosophy Students (NAPS), Akwa Ibom State University Chapter, he received the Most Outstanding Departmental President of the Year Award from the Students' Union Government, a milestone that reflected his commitment to student leadership, service and organisational development.</p>
+            <p>Through The Synergy Leadership Academy, he envisions a community where people from different backgrounds share their stories, knowledge, cultures and achievements, and learn from one another across borders. His broader vision is to equip people for personal growth, financial independence, purposeful living and lasting impact.</p>
+          </div>
+        </details>
+        <div class="dcta-row">
+          <a class="btn btn-white" id="dirWa" href="#" target="_blank" rel="noopener">Message the Director <span class="arr" aria-hidden="true">→</span></a>
+          <small>Business, contracts, partnerships and collaborations</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="sec" id="recognition" aria-labelledby="rc">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag">Recognition</span><h2 id="rc">Leadership that has been recognised</h2></div>
+        <p>Honours received by the Director, and moments where he celebrated the people who serve alongside him.</p>
+      </div>
+      <div class="rgrid">
+        <figure class="rcard big"><div class="im"><img src="img/r-1.jpg" alt="Mfehe-Abasi Ekpe receiving a framed Award of Excellence on stage" width="900" height="600" style="object-position:60% 40%"></div><figcaption><small>Honour</small><b>Award of Excellence</b><span>Presented to Mfehe-Abasi Ekpe in recognition of his leadership.</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="img/r-2.jpg" alt="Mfehe-Abasi Ekpe holding a Merit Award" width="715" height="572"></div><figcaption><small>Honour</small><b>Merit Award</b><span>Students' Union Government, Akwa Ibom State University.</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="img/r-3.jpg" alt="Mfehe-Abasi Ekpe smiling with a framed certificate" width="715" height="584" style="object-position:50% 30%"></div><figcaption><small>Honour</small><b>Certificate presentation</b><span>Recognised for his service and contribution.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="sec" id="how" aria-labelledby="hw" style="padding-top:0">
+    <div class="wrap">
+      <div class="head center">
+        <span class="tag">How to join</span>
+        <h2 id="hw">Three steps. Two minutes.</h2>
+      </div>
+      <div class="steps">
+        <div class="st"><span class="n">01</span><h3>Fill in your details</h3><p>Your name, contact, address and the department you'd love to serve in.</p></div>
+        <div class="st"><span class="n">02</span><h3>Choose WhatsApp or email</h3><p>Your message is written for you, with every detail in the right place.</p></div>
+        <div class="st"><span class="n">03</span><h3>Press Send</h3><p>The app opens with everything filled in. Send it and the academy will reach out.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section class="sec reg" id="register" aria-labelledby="rg">
+    <div class="wrap">
+      <div class="reg-side">
+        <span class="tag">Registration</span>
+        <h2 id="rg">Be part of something bigger than yourself.</h2>
+        <p>You don't need extensive experience. What matters most is your willingness to contribute, learn from others and work toward a shared vision.</p>
+        <div class="reg-contact">
+          <div class="cl">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="t"><span>Email</span><b>thesynergyleadershipacademy@gmail.com</b></span>
+            <button type="button" class="ghost" data-copy="thesynergyleadershipacademy@gmail.com" data-what="Email address">Copy</button>
+          </div>
+          <div class="cl">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.55 0 8.24 3.7 8.24 8.25 0 4.54-3.7 8.22-8.24 8.22Z"/></svg></span>
+            <span class="t"><span>WhatsApp</span><b>0907 760 1423</b></span>
+            <button type="button" class="ghost" data-copy="09077601423" data-what="Number">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <div class="form-top"><b>Volunteer registration</b><span id="count">0 of 7 required</span></div>
+        <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+        <div class="grid2">
+          <div class="f full" data-k="name"><label for="f_name">Full name</label><input id="f_name" type="text" autocomplete="name" placeholder="First, middle and last name"><div class="err" id="e_name"></div></div>
+          <div class="f" data-k="nationality"><label for="f_nat">Nationality</label><input id="f_nat" type="text" autocomplete="country-name" placeholder="e.g. Nigerian" list="nats"><datalist id="nats"><option value="Nigerian"><option value="Ghanaian"><option value="Cameroonian"><option value="Beninese"><option value="Kenyan"><option value="South African"><option value="British"><option value="American"></datalist><div class="err" id="e_nationality"></div></div>
+          <div class="f" data-k="sex"><span class="lbl" id="sexl">Sex</span><div class="seg" role="radiogroup" aria-labelledby="sexl"><input type="radio" name="sex" id="s_m" value="Male"><label for="s_m">Male</label><input type="radio" name="sex" id="s_f" value="Female"><label for="s_f">Female</label></div><div class="err" id="e_sex"></div></div>
+          <div class="f" data-k="relationship"><label for="f_rel">Relationship status</label><select id="f_rel"><option value="">Select</option><option>Single</option><option>Engaged</option><option>Married</option><option>Divorced</option><option>Widowed</option><option>Prefer not to say</option></select><div class="err" id="e_relationship"></div></div>
+          <div class="f"><label for="f_edu">Educational qualification <span class="opt">(if any)</span></label><select id="f_edu"><option value="">Select</option><option>None</option><option>SSCE / WAEC / NECO</option><option>OND</option><option>NCE</option><option>HND</option><option>B.Sc. / B.A. / B.Ed.</option><option>Postgraduate Diploma</option><option>Master's degree</option><option>PhD</option><option>Currently a student</option><option>Other</option></select></div>
+          <div class="f" data-k="phone"><label for="f_phone">Phone number</label><input id="f_phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0803 123 4567"><div class="err" id="e_phone"></div></div>
+          <div class="f" data-k="department"><label for="f_dept">Preferred department</label><select id="f_dept"><option value="">Select a department</option></select><div class="err" id="e_department"></div></div>
+          <div class="f full" data-k="address"><label for="f_addr">Residential address</label><textarea id="f_addr" rows="2" autocomplete="street-address" placeholder="House number, street, town or city, state"></textarea><div class="err" id="e_address"></div></div>
+          <div class="f full"><label for="f_note">Anything else? <span class="opt">(optional)</span></label><textarea id="f_note" rows="2" placeholder="Your skills, experience, or why you want to join"></textarea></div>
+        </div>
+
+        <p class="chan-h" id="chl">Send my details with</p>
+        <div class="chan" role="radiogroup" aria-labelledby="chl">
+          <input type="radio" name="channel" id="c_wa" value="whatsapp" checked>
+          <label for="c_wa"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></span><span><b>WhatsApp</b><small>0907 760 1423</small></span></label>
+          <input type="radio" name="channel" id="c_em" value="email">
+          <label for="c_em"><span class="ic"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Email</b><small>Gmail or any email app</small></span></label>
+        </div>
+
+        <div class="send">
+          <a class="btn btn-red" id="goWa" href="#" target="_blank" rel="noopener">Send on WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+          <div class="send-row" id="emailRow" hidden>
+            <a class="btn btn-red" id="goGmail" href="#" target="_blank" rel="noopener">Send with Gmail <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn-line" id="goMail" href="#">Other email app</a>
+          </div>
+          <p class="note" id="sendNote">WhatsApp opens with your message ready. Press Send there to finish.</p>
+        </div>
+        <div class="alert" id="alert" role="alert" hidden></div>
+        <div class="done" id="done" hidden><b>Your message is ready. One step left</b><ol id="doneL"></ol></div>
+
+        <details class="pv">
+          <summary>Preview your message <svg class="chev" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="m3 5 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <div class="pv-body">
+            <div class="row"><span id="pvTo">To WhatsApp · 0907 760 1423</span><button type="button" class="ghost" id="copyMsg">Copy message</button></div>
+            <div class="bubble" id="bubble"></div>
+          </div>
+        </details>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq" aria-labelledby="fq">
+    <div class="wrap">
+      <div class="faq-side">
+        <span class="tag">Questions</span>
+        <h2 id="fq">Before you join</h2>
+        <p>Still unsure about something? Message the academy on WhatsApp and someone will help.</p>
+        <div><a class="btn btn-line" href="https://wa.me/2349077601423" target="_blank" rel="noopener">Ask on WhatsApp <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+      <div>
+        <details class="qa" open><summary>Who can join the academy?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Anyone who shares the vision: students, graduates, professionals, entrepreneurs, researchers, creatives and anyone passionate about leadership and personal development. People who have experienced what The Synergy stands for are especially welcome.</p></details>
+        <details class="qa"><summary>Do I need experience?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">No. You don't need extensive experience. What matters most is your willingness to contribute, learn from others and work toward shared goals.</p></details>
+        <details class="qa"><summary>What if I'm interested in more than one department?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Choose the one you'd most like to serve in, then mention the others in the "Anything else?" box on the form. It goes into your message automatically.</p></details>
+        <details class="qa"><summary>How do I send my registration?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Fill in the form, choose WhatsApp or email, and tap Send. Your app opens with every detail already written. Press Send there to finish. You can also send your details yourself to 0907 760 1423 or thesynergyleadershipacademy@gmail.com.</p></details>
+        <details class="qa"><summary>Can organisations partner with the academy?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Yes. The academy welcomes partners and supporters. For partnerships, contracts and collaborations, message the Director directly on WhatsApp.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing" aria-labelledby="cl">
+    <div class="wrap">
+      <div class="cbox">
+        <div><span class="tag">Our vision, our movement, our legacy</span><h2 id="cl">The journey has begun. Be part of it.</h2></div>
+        <div>
+          <p>Great things happen when people with different experiences, abilities and ideas come together for a common purpose.</p>
+          <div class="row">
+            <a class="btn btn-white" href="#register">Join the academy <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn-line-w" href="https://wa.me/2349077601423" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="img/logo-white.png" alt="The Synergy Leadership Academy" width="520" height="223">
+      <p style="max-width:36ch">Building leaders. Sharing stories. Transforming lives.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul><li><a href="#about">About</a></li><li><a href="#departments">Departments</a></li><li><a href="#director">The Director</a></li><li><a href="#faq">FAQ</a></li><li><a href="#register">Register</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li class="brk">thesynergyleadershipacademy@gmail.com</li><li><a href="https://wa.me/2349077601423" target="_blank" rel="noopener">WhatsApp 0907 760 1423</a></li></ul>
+    </div>
+    <div class="copy"><span>© 2026 The Synergy Leadership Academy</span><span>More than a movement. A community. A vision. A legacy.</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var WA = "2349077601423", EMAIL = "thesynergyleadershipacademy@gmail.com";
+  var DEPTS = ["Media and Communications","Research and Data Development","Administration","Legal Affairs and Correspondence","Bursary and Finance","Logistics and Operations","Public Relations (PRO)","Welfare","Security and Safety","Human Resources and Volunteer Management","Training and Leadership Development","Partnerships and Strategic Development","Editorial and Publications"];
+  var $ = function(s){ return document.querySelector(s); };
+  var form = $("#form"), sel = $("#f_dept"), grid = $("#dgrid");
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Photo wall (each column duplicated for a seamless loop)
+  var A = [["w-1.jpg",720,1080,"On stage"],["w-2.jpg",720,480,"Our community"],["w-3.jpg",715,572,"Merit Award"],["w-4.jpg",715,517,"With partners"],["w-5.jpg",720,480,"Speaking"]];
+  var B = [["w-6.jpg",720,1080,"The Director"],["w-7.jpg",720,480,"Award of Excellence"],["w-8.jpg",720,480,"The team"],["w-9.jpg",715,584,"Certificate"],["w-10.jpg",720,480,"Honouring others"]];
+  function fill(el, list){
+    var html = "";
+    for (var r = 0; r < 2; r++) list.forEach(function(p){
+      html += '<figure class="tile"' + (r ? ' aria-hidden="true"' : "") + '><img src="img/' + p[0] + '" alt="' + (r ? "" : p[3]) + '" width="' + p[1] + '" height="' + p[2] + '"><figcaption>' + p[3] + '</figcaption></figure>';
+    });
+    el.innerHTML = html;
+  }
+  fill($("#trackA"), A); fill($("#trackB"), B);
+
+  DEPTS.forEach(function(d, i){
+    var full = d + " Department";
+    var o = document.createElement("option"); o.value = full; o.textContent = full; sel.appendChild(o);
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "dcard"; b.dataset.v = full;
+    b.setAttribute("aria-label", "Choose " + full);
+    b.innerHTML = '<span class="no">' + String(i+1).padStart(2,"0") + '</span><span class="nm">' + d + '</span><span class="go" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+    b.addEventListener("click", function(){
+      sel.value = full; update(); setErr("department", false);
+      toast(d + " selected");
+      $("#register").scrollIntoView({behavior: reduce ? "auto" : "smooth"});
+      setTimeout(function(){ $("#f_name").focus({preventScroll:true}); }, 700);
+    });
+    grid.appendChild(b);
+  });
+  var cta = document.createElement("div"); cta.className = "dcta";
+  cta.innerHTML = '<div><b>Not sure where you fit?</b><span>Register anyway and tell us about your skills.</span></div><a class="btn btn-red" href="#register">Register now <span class="arr" aria-hidden="true">→</span></a>';
+  grid.appendChild(cta);
+
+  $("#dirWa").href = "https://wa.me/" + WA + "?text=" + encodeURIComponent("Hello Mr. Ekpe, I'm reaching out through The Synergy Leadership Academy website regarding ");
+
+  function v(id){ var e = document.getElementById(id); return e ? e.value.trim() : ""; }
+  function radio(n){ var e = form.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : ""; }
+  function data(){ return { name:v("f_name"), nationality:v("f_nat"), sex:radio("sex"), relationship:v("f_rel"), education:v("f_edu"), phone:v("f_phone"), department:v("f_dept"), address:v("f_addr"), note:v("f_note") }; }
+  function channel(){ return radio("channel"); }
+
+  var ROWS = [["Full Name","name"],["Nationality","nationality"],["Sex","sex"],["Relationship Status","relationship"],["Educational Qualification","education"],["Phone Number","phone"],["Preferred Department","department"],["Residential Address","address"]];
+  function message(d, wa){
+    var B = function(s){ return wa ? "*" + s + "*" : s; };
+    var L = ["Hello, I would like to join " + B("The Synergy Leadership Academy") + ".", "", B("REGISTRATION DETAILS")];
+    ROWS.forEach(function(r){ var x = d[r[1]]; if (!x && r[1] === "education") x = "Not stated"; L.push(r[0] + ": " + (x || "—")); });
+    if (d.note) L.push("", B("About me"), d.note);
+    L.push("", "Thank you.");
+    if (d.name) L.push(d.name);
+    return L.join("\n");
+  }
+  function subject(d){ return "Volunteer Registration" + (d.name ? " – " + d.name : "") + (d.department ? " – " + d.department : ""); }
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+  var gWa = $("#goWa"), gGm = $("#goGmail"), gMail = $("#goMail");
+  var REQ = ["name","nationality","sex","relationship","phone","department","address"];
+  var MSG = { name:"Enter your full name, at least first and last name.", nationality:"Enter your nationality, for example Nigerian.", sex:"Choose Male or Female.", relationship:"Choose your relationship status.", phone:"Enter a phone number with at least 10 digits.", department:"Choose the department you'd like to serve in.", address:"Enter your residential address." };
+  function ok(k, d){
+    if (k === "name") return d.name.split(/\s+/).filter(Boolean).length >= 2;
+    if (k === "phone") return d.phone.replace(/\D/g,"").length >= 10;
+    return !!d[k];
+  }
+  function setErr(k, bad){ var f = form.querySelector('[data-k="' + k + '"]'); f.classList.toggle("bad", bad); document.getElementById("e_" + k).textContent = bad ? MSG[k] : ""; }
+
+  function update(){
+    var d = data(), wa = channel() === "whatsapp", em = message(d, false), s = subject(d);
+    $("#bubble").innerHTML = esc(wa ? em : "Subject: " + s + "\n\n" + em).split("\n").map(function(l){ return /: —$/.test(l) ? l.replace(/—$/, '<span class="ph">not filled yet</span>') : l; }).join("\n");
+    gWa.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(message(d, true));
+    gGm.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(EMAIL) + "&su=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(em);
+    gMail.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(em);
+    var n = REQ.filter(function(k){ return ok(k, d); }).length;
+    $("#count").textContent = n === REQ.length ? "Ready to send" : n + " of " + REQ.length + " required";
+    $("#meter").style.width = (n / REQ.length * 100) + "%";
+    grid.querySelectorAll(".dcard").forEach(function(c){ c.classList.toggle("picked", c.dataset.v === d.department); });
+    save(d);
+  }
+  function setChannel(){
+    var wa = channel() === "whatsapp";
+    gWa.hidden = !wa; $("#emailRow").hidden = wa;
+    $("#pvTo").textContent = wa ? "To WhatsApp · 0907 760 1423" : "To " + EMAIL;
+    $("#sendNote").textContent = wa ? "WhatsApp opens with your message ready. Press Send there to finish." : "Gmail opens in a new tab with everything filled in. Press Send there to finish.";
+    $("#done").hidden = true;
+  }
+  function validate(){
+    var d = data(), first = null, n = 0;
+    REQ.forEach(function(k){ var g = ok(k, d); setErr(k, !g); if (!g){ n++; if (!first) first = k; } });
+    var a = $("#alert");
+    if (first){
+      a.hidden = false;
+      a.textContent = n === 1 ? "One detail is missing. It's highlighted above." : n + " details are missing. They're highlighted above.";
+      var f = form.querySelector('[data-k="' + first + '"]'), el = f.querySelector("input,select,textarea");
+      f.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"});
+      if (el) setTimeout(function(){ el.focus({preventScroll:true}); }, 350);
+      return false;
+    }
+    a.hidden = true; return true;
+  }
+  function onSend(kind){
+    return function(e){
+      update();
+      if (!validate()){ e.preventDefault(); return; }
+      var d = data();
+      var L = kind === "whatsapp"
+        ? ["WhatsApp is opening in a new tab with your details filled in.", "Check the message, then press Send.", "The academy will contact you on " + (d.phone || "your number") + "."]
+        : kind === "gmail" ? ["Gmail is opening in a new tab with your details filled in.", "Sign in if asked, check the message, then press Send."]
+        : ["Your email app should open with the message filled in.", "Check it, then press Send."];
+      $("#doneL").innerHTML = L.map(function(t){ return "<li>" + esc(t) + "</li>"; }).join("") + "<li>Nothing opened? Open the preview below, copy the message and send it yourself.</li>";
+      $("#done").hidden = false;
+    };
+  }
+  gWa.addEventListener("click", onSend("whatsapp"));
+  gGm.addEventListener("click", onSend("gmail"));
+  gMail.addEventListener("click", onSend("mail"));
+  form.addEventListener("submit", function(e){ e.preventDefault(); });
+  function clearIfOk(t){ var f = t.closest("[data-k]"); if (f && f.classList.contains("bad") && ok(f.dataset.k, data())) setErr(f.dataset.k, false); if (!$("#alert").hidden && REQ.every(function(k){ return ok(k, data()); })) $("#alert").hidden = true; }
+  form.addEventListener("input", function(e){ update(); clearIfOk(e.target); });
+  form.addEventListener("change", function(e){ if (e.target.name === "channel") setChannel(); update(); clearIfOk(e.target); });
+  form.querySelectorAll("[data-k] input:not([type=radio]), [data-k] select, [data-k] textarea").forEach(function(el){
+    el.addEventListener("blur", function(){ var k = el.closest("[data-k]").dataset.k; if (el.value.trim()) setErr(k, !ok(k, data())); });
+  });
+
+  var tt;
+  function toast(t){ var el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(tt); tt = setTimeout(function(){ el.classList.remove("show"); }, 2200); }
+  function fallback(text, what){
+    var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); var g = false; try { g = document.execCommand("copy"); } catch(_){} ta.remove();
+    toast(g ? what + " copied" : "Couldn't copy. Select the text and copy it manually.");
+  }
+  function copy(text, what){ try { navigator.clipboard.writeText(text).then(function(){ toast(what + " copied"); }, function(){ fallback(text, what); }); } catch(_){ fallback(text, what); } }
+  $("#copyMsg").addEventListener("click", function(){ var d = data(), wa = channel() === "whatsapp"; copy((wa ? "" : "Subject: " + subject(d) + "\n\n") + message(d, wa), "Message"); });
+  document.querySelectorAll("[data-copy]").forEach(function(b){ b.addEventListener("click", function(){ copy(b.dataset.copy, b.dataset.what); }); });
+
+  var KEY = "tsla-reg-v3";
+  function save(d){ try { d.channel = channel(); localStorage.setItem(KEY, JSON.stringify(d)); } catch(_){} }
+  function restore(){
+    var d = null; try { d = JSON.parse(localStorage.getItem(KEY) || "null"); } catch(_){}
+    if (!d) return;
+    [["f_name","name"],["f_nat","nationality"],["f_rel","relationship"],["f_edu","education"],["f_phone","phone"],["f_dept","department"],["f_addr","address"],["f_note","note"]].forEach(function(p){ if (d[p[1]]) document.getElementById(p[0]).value = d[p[1]]; });
+    ["sex","channel"].forEach(function(n){ if (d[n]) form.querySelectorAll('input[name="' + n + '"]').forEach(function(r){ if (r.value === d[n]) r.checked = true; }); });
+  }
+  restore(); setChannel(); update();
+})();
+</script>
+
+</body>
+</html>
