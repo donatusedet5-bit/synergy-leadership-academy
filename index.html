@@ -197,16 +197,16 @@ details.bio .body{display:grid;gap:14px;margin-top:16px;color:#C6CEE0;font-size:
 .dcta-row small{font-size:14px;color:var(--on-navy)}
 
 /* Recognition */
-.rgrid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
 .rcard{margin:0;display:flex;flex-direction:column;gap:14px}
-.rcard .im{border-radius:10px;overflow:hidden;height:clamp(300px,30vw,400px);background:var(--paper)}
+.rcard .im{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:var(--paper)}
 .rcard .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .rcard:hover .im img{transform:scale(1.04)}
 .rcard figcaption{display:flex;flex-direction:column;gap:4px;padding-top:2px;border-top:2px solid var(--navy);padding-top:14px}
 .rcard figcaption small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
 .rcard figcaption b{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.3}
-.rcard figcaption span{font-size:14px;color:var(--muted);line-height:1.45}
-.rcard figcaption{min-height:96px}
+.rcard figcaption span{font-size:14px;color:var(--muted);line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -328,8 +328,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
   .dgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .dcta{grid-column:span 2}
   .values{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .rgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .rcard.big{grid-column:1/-1}
+  .rgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .hero-copy{padding-right:36px}
 }
 @media (max-width:920px){
@@ -357,9 +356,9 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
   .dcard{min-height:130px;padding:18px}
   .dcard .nm{font-size:15.5px}
   .values,.rgrid{grid-template-columns:minmax(0,1fr)}
+  .rcard figcaption span{white-space:normal}
   .rcard.big{grid-column:auto}
-  .rcard .im{height:auto;aspect-ratio:4/3}
-  .rcard figcaption{min-height:0}
+
   .grid2,.chan,.send-row{grid-template-columns:minmax(0,1fr)}
   .dfacts{grid-template-columns:minmax(0,1fr)}
   .dfacts div + div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
@@ -520,9 +519,9 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
         <p>Honours received by the Director, and moments where he celebrated the people who serve alongside him.</p>
       </div>
       <div class="rgrid">
-        <figure class="rcard big"><div class="im"><img src="img/r-1.jpg" alt="Mfehe-Abasi Ekpe receiving a framed Award of Excellence on stage" width="900" height="600" style="object-position:60% 40%"></div><figcaption><small>Honour</small><b>Award of Excellence</b><span>Presented to Mfehe-Abasi Ekpe in recognition of his leadership.</span></figcaption></figure>
-        <figure class="rcard"><div class="im"><img src="img/r-2.jpg" alt="Mfehe-Abasi Ekpe holding a Merit Award" width="715" height="572"></div><figcaption><small>Honour</small><b>Merit Award</b><span>Students' Union Government, Akwa Ibom State University.</span></figcaption></figure>
-        <figure class="rcard"><div class="im"><img src="img/r-3.jpg" alt="Mfehe-Abasi Ekpe smiling with a framed certificate" width="715" height="584" style="object-position:50% 30%"></div><figcaption><small>Honour</small><b>Certificate presentation</b><span>Recognised for his service and contribution.</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="img/r-1.jpg" alt="Mfehe-Abasi Ekpe receiving a framed Award of Excellence on stage" width="900" height="600" style="object-position:60% 40%"></div><figcaption><small>Honour</small><b>Award of Excellence</b><span>For outstanding leadership</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="img/r-2.jpg" alt="Mfehe-Abasi Ekpe holding a Merit Award" width="715" height="572"></div><figcaption><small>Honour</small><b>Merit Award</b><span>AKSU Students' Union Government</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="img/r-3.jpg" alt="Mfehe-Abasi Ekpe smiling with a framed certificate" width="715" height="584" style="object-position:50% 30%"></div><figcaption><small>Honour</small><b>Certificate of Honour</b><span>For service and contribution</span></figcaption></figure>
       </div>
     </div>
   </section>
