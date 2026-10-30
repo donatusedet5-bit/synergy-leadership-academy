@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="The Synergy Leadership Academy">
-<meta property="og:description" content="Building leaders. Sharing stories. Transforming lives. Register as a volunteer, partner or supporter.">
-<meta property="og:image" content="img/slide-1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://synergy-leadership-academy.vercel.app/">
+<meta property="og:title" content="Online Leadership Boot Camp · 4–6 Dec 2026 · The Synergy Leadership Academy">
+<meta property="og:description" content="Three days on Zoom, 8:00pm daily. Theme: The Excellence Blueprint. Register in a minute and join The Synergy Leadership Community.">
+<meta property="og:image" content="https://synergy-leadership-academy.vercel.app/img/bootcamp-flier.jpg">
+<meta property="og:image:width" content="846">
+<meta property="og:image:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1A3C">
-<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="icon" type="image/png" href="/img/logo.png">
 <title>The Synergy Leadership Academy</title>
 <meta name="description" content="Join The Synergy Leadership Academy as a volunteer, partner or supporter. Register in two minutes and send your details by WhatsApp or email.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -323,6 +328,156 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:8px;font-weight:500;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s,transform .35s var(--ease);z-index:80;max-width:calc(100% - 40px);text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
+
+/* Announcement bar */
+.ann{background:var(--red);color:#fff;font-size:14.5px}
+.ann .wrap{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 14px;padding-block:9px;text-align:center}
+.ann b{font-weight:600}
+.ann .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.6)}
+.ann a{font-weight:600;color:#fff;text-underline-offset:3px}
+.ann a:hover{text-decoration-thickness:2px}
+
+/* Shared: links that open the boot camp form */
+button.badge{font:inherit;font-size:14px;font-weight:500;color:var(--navy);background:#fff;cursor:pointer;transition:border-color .2s}
+button.badge:hover{border-color:var(--navy)}
+button.badge .go{color:var(--red);font-weight:600}
+
+/* Boot camp section */
+.bc{background:var(--paper);border-top:1px solid var(--line)}
+.bc-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(32px,5vw,72px);align-items:center}
+.flier{position:relative;display:block;padding:0;border:0;background:none;cursor:pointer;border-radius:10px;overflow:hidden;text-align:left}
+.flier img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);transition:transform .8s var(--ease)}
+.flier:hover img{transform:scale(1.02)}
+.flier .hint{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--navy);color:#fff;border-radius:8px;padding:12px 14px;font-size:14.5px;font-weight:600}
+.flier .hint i{font-style:normal;transition:transform .3s var(--ease)}
+.flier:hover .hint i{transform:translateX(4px)}
+.bc-info{display:flex;flex-direction:column;gap:22px;min-width:0}
+.bc-info h2{font-size:clamp(2.2rem,1.3rem + 3vw,3.7rem);letter-spacing:-.055em;line-height:.96}
+.theme{border-left:3px solid var(--red);padding:2px 0 2px 18px;display:flex;flex-direction:column;gap:4px}
+.theme small{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.theme b{font-size:20px;font-weight:600;letter-spacing:-.025em}
+.theme span{color:var(--muted);font-size:16px}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;background:#fff}
+.meta div{padding:16px 18px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.meta div + div{border-left:1px solid var(--line)}
+.meta span{font-size:12.5px;color:var(--muted)}
+.meta b{font-size:16px;font-weight:600;letter-spacing:-.02em;line-height:1.3}
+.cd{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cd-label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cd-boxes{display:flex;gap:8px}
+.cd-boxes div{min-width:64px;padding:10px 8px;border-radius:8px;background:var(--navy);color:#fff;text-align:center;display:flex;flex-direction:column;gap:2px}
+.cd-boxes b{font-size:24px;font-weight:600;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.cd-boxes span{font-size:11px;color:var(--on-navy)}
+.cd-live{font-weight:600;color:var(--red)}
+.bc-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.bc-note{font-size:14.5px;color:var(--muted);max-width:52ch}
+.bc-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(48px,6vw,72px);border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+.bc-steps div{padding:24px 26px;display:flex;gap:16px;align-items:flex-start}
+.bc-steps div + div{border-left:1px solid var(--line)}
+.bc-steps .n{flex:none;width:36px;height:36px;border-radius:7px;background:var(--paper);color:var(--red);display:grid;place-items:center;font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+.bc-steps b{display:block;font-size:16.5px;font-weight:600;letter-spacing:-.02em;margin-bottom:4px}
+.bc-steps p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.spk-h{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:clamp(48px,6vw,72px) 0 20px}
+.spk-h h3{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.2rem);letter-spacing:-.045em}
+.spk-h p{font-size:14px;color:var(--muted)}
+.spk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sp{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;align-items:center;gap:18px;transition:border-color .25s}
+.sp:hover{border-color:var(--navy)}
+.sp img{flex:none;width:96px;height:96px;border-radius:8px;object-fit:cover;object-position:50% 20%;background:var(--paper)}
+.sp figcaption{display:flex;flex-direction:column;gap:4px;min-width:0}
+.sp small{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.sp b{font-size:17px;font-weight:600;letter-spacing:-.025em;line-height:1.25}
+.sp span{font-size:13.5px;color:var(--muted);line-height:1.45}
+.powered{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;font-size:14px;color:var(--muted)}
+.powered span{padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--navy);font-weight:600}
+
+/* Registration popup */
+dialog.modal{border:0;padding:0;margin:auto;width:min(580px,calc(100% - 32px));max-height:calc(100dvh - 32px);border-radius:14px;background:#fff;color:var(--navy);overflow:hidden;box-shadow:0 40px 90px -30px rgba(11,26,60,.6)}
+dialog.modal[open]{display:flex;flex-direction:column;animation:pop .35s var(--ease)}
+dialog.modal::backdrop{background:rgba(11,26,60,.62)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.m-head{flex:none;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px;background:var(--navy);color:#fff}
+.m-head small{display:block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red-soft);margin-bottom:6px}
+.m-head h2{font-size:24px;letter-spacing:-.035em;line-height:1.1}
+.m-head p{font-size:13.5px;color:var(--on-navy);margin-top:6px}
+.m-x{flex:none;width:38px;height:38px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.m-x:hover{background:rgba(255,255,255,.1)}
+.m-body{flex:1;overflow:auto;padding:22px;overscroll-behavior:contain}
+.m-body .grid2{gap:14px}
+.m-body .f input,.m-body .f select,.m-body .f textarea{font-size:16px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.m-privacy{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:16px}
+.m-privacy svg{flex:none;margin-top:2px}
+.m-submit{margin-top:16px;width:100%;padding:18px;font-size:16px}
+.m-submit[disabled]{opacity:.75;cursor:progress;transform:none}
+.spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.m-err{margin-top:12px;padding:12px 14px;border-radius:8px;background:#FFF2F2;color:var(--red);font-size:14px;font-weight:500}
+.m-err a{color:var(--red);font-weight:600}
+.m-done{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:12px 4px 4px}
+.m-done .ok{width:64px;height:64px;border-radius:50%;background:#EAF7F0;color:var(--ok);display:grid;place-items:center}
+.m-done h3{font-size:26px;letter-spacing:-.04em}
+.m-done p{color:var(--muted);font-size:15.5px;max-width:42ch}
+.btn-wa{background:#128C4A;color:#fff;width:100%;padding:18px;font-size:16px}
+.btn-wa:hover{background:#0E7A40}
+.m-redirect{font-size:13.5px;color:var(--muted)}
+.m-redirect button{background:none;border:0;padding:0 2px;font:600 13.5px var(--font);color:var(--navy);text-decoration:underline;cursor:pointer}
+
+/* Admin view */
+.admin{position:fixed;inset:0;z-index:90;background:#fff;overflow:auto;padding-top:env(safe-area-inset-top,0px)}
+.admin-bar{position:sticky;top:0;z-index:2;background:var(--navy);color:#fff}
+.admin-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.admin-bar b{font-size:16px;font-weight:600}
+.admin-bar a{color:#fff;font-size:14px}
+.admin-login{max-width:420px;margin:72px auto;display:flex;flex-direction:column;gap:14px}
+.admin-login h1{font-size:30px;letter-spacing:-.04em}
+.admin-login p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0 18px}
+.stats div{border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.stats span{display:block;font-size:13px;color:var(--muted)}
+.stats b{font-size:30px;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.tools input{flex:1 1 240px;font:400 15px var(--font);padding:12px 14px;border:1px solid var(--line-2);border-radius:8px;color:var(--navy)}
+.tools input:focus{outline:none;border-color:var(--navy)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+.tbl table{border-collapse:collapse;width:100%;min-width:1100px;font-size:14px}
+.tbl th{position:sticky;top:0;background:var(--paper);text-align:left;font-weight:600;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td.n{color:var(--muted);font-variant-numeric:tabular-nums}
+.tbl td.nw{white-space:nowrap}
+.tbl .empty{padding:40px;text-align:center;color:var(--muted)}
+body.admin-open{overflow:hidden}
+.del{background:none;border:1px solid var(--line-2);border-radius:6px;padding:5px 10px;font:500 12.5px var(--font);color:var(--red);cursor:pointer}
+.del:hover{border-color:var(--red)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (max-width:920px){
+  .bc-grid{grid-template-columns:minmax(0,1fr)}
+  .flier{max-width:460px;margin-inline:auto;width:100%}
+  .bc-steps{grid-template-columns:minmax(0,1fr)}
+  .bc-steps div + div{border-left:0;border-top:1px solid var(--line)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .ann{font-size:13.5px}
+  .ann .dot,.ann .hide-sm{display:none}
+  .meta{grid-template-columns:minmax(0,1fr)}
+  .meta div + div{border-left:0;border-top:1px solid var(--line)}
+  .cd-boxes div{min-width:0;flex:1}
+  .cd-boxes{width:100%}
+  .bc-cta .btn{flex:1 1 auto}
+  .spk{grid-template-columns:minmax(0,1fr)}
+  .sp{gap:14px;padding:12px}
+  .sp img{width:76px;height:76px}
+  .sp b{font-size:16px}
+  .spk-h p{display:none}
+  .badge .hide-sm{display:none}
+  dialog.modal{width:100%;max-width:none;height:100dvh;max-height:100dvh;border-radius:0;margin:0}
+  .m-head{padding:calc(16px + env(safe-area-inset-top,0px)) 18px 16px}
+  .m-body{padding:18px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+}
+
 /* Responsive */
 @media (max-width:1100px){
   .dgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -386,17 +541,20 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
 <body>
 
 
+<div class="ann" role="region" aria-label="Announcement"><div class="wrap"><span><b>New:</b> Three-Day Online Leadership Boot Camp</span><i class="dot" aria-hidden="true"></i><span class="hide-sm">4–6 December 2026 on Zoom</span><a href="/bootcamp" data-open-bc>Register now →</a></div></div>
+
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="The Synergy Leadership Academy home"><img src="img/logo.png" alt="The Synergy Leadership Academy" width="520" height="223"></a>
+    <a class="brand" href="#top" aria-label="The Synergy Leadership Academy home"><img src="/img/logo.png" alt="The Synergy Leadership Academy" width="520" height="223"></a>
     <nav class="nav-links" aria-label="Main">
+      <a href="#bootcamp">Boot Camp</a>
       <a href="#about">About</a>
       <a href="#departments">Departments</a>
       <a href="#director">The Director</a>
       <a href="#recognition">Recognition</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-navy btn-sm" href="#register">Join the academy</a>
+    <a class="btn btn-red btn-sm" href="/bootcamp" data-open-bc>Register for Boot Camp</a>
   </div>
 </header>
 
@@ -404,7 +562,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
   <!-- HERO -->
   <section class="hero" aria-labelledby="h1">
     <div class="hero-copy">
-      <span class="badge rise d1"><b>New</b>The Synergy is now an academy</span>
+      <button type="button" class="badge rise d1" data-open-bc><b>4–6 Dec</b><span><span class="hide-sm">Online Leadership </span>Boot Camp</span> <span class="go">Register →</span></button>
       <h1 id="h1" class="rise d2">Building leaders. Sharing stories. <span class="r">Transforming lives.</span></h1>
       <p class="rise d3">A community where stories, culture, knowledge and achievements are explored, taught, documented and shared with people around the globe. We're calling on volunteers, partners and supporters to help build it.</p>
       <div class="hero-cta rise d4">
@@ -412,7 +570,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
         <a class="btn btn-line" href="#departments">See the departments</a>
       </div>
       <div class="proof rise d5">
-        <div class="avs" aria-hidden="true"><img src="img/face-1.jpg" alt="" width="42" height="42"><img src="img/face-2.jpg" alt="" width="42" height="42"><img src="img/face-3.jpg" alt="" width="42" height="42"><img src="img/face-4.jpg" alt="" width="42" height="42"><span class="more">+</span></div>
+        <div class="avs" aria-hidden="true"><img src="/img/face-1.jpg" alt="" width="42" height="42"><img src="/img/face-2.jpg" alt="" width="42" height="42"><img src="/img/face-3.jpg" alt="" width="42" height="42"><img src="/img/face-4.jpg" alt="" width="42" height="42"><span class="more">+</span></div>
         <p><b>Open to everyone.</b> Students, graduates, professionals and entrepreneurs. No experience required.</p>
       </div>
     </div>
@@ -434,6 +592,52 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
     </div>
   </section>
 
+  <!-- BOOT CAMP -->
+  <section class="sec bc" id="bootcamp" aria-labelledby="bct">
+    <div class="wrap">
+      <div class="bc-grid">
+        <button type="button" class="flier" data-open-bc aria-label="Open the boot camp registration form">
+          <img src="/img/bootcamp-flier.jpg" alt="Flier: The Synergy Leadership Academy presents its First-Ever Three-Day Online Boot Camp, 4th to 6th December 2026, on Zoom at 8:00pm daily" width="846" height="1080" loading="lazy">
+          <span class="hint">Tap to register <i aria-hidden="true">→</i></span>
+        </button>
+        <div class="bc-info">
+          <span class="tag">Boot Camp 2026 · Online</span>
+          <h2 id="bct">First-Ever Three-Day Online Leadership Boot Camp</h2>
+          <div class="theme"><small>Theme</small><b>The Excellence Blueprint</b><span>Cultivating the Mindset, Discipline, and Values for Exceptional Leadership</span></div>
+          <div class="meta">
+            <div><span>Date</span><b>4–6 December 2026</b></div>
+            <div><span>Venue</span><b>Zoom (online)</b></div>
+            <div><span>Time</span><b>8:00pm daily</b></div>
+          </div>
+          <div class="cd" id="cd" aria-live="off">
+            <span class="cd-label">Starts in</span>
+            <div class="cd-boxes"><div><b id="cdD">--</b><span>days</span></div><div><b id="cdH">--</b><span>hours</span></div><div><b id="cdM">--</b><span>mins</span></div><div><b id="cdS">--</b><span>secs</span></div></div>
+          </div>
+          <div class="bc-cta">
+            <a class="btn btn-red" href="/bootcamp" data-open-bc>Register now <span class="arr" aria-hidden="true">→</span></a>
+            <button type="button" class="btn btn-line" id="bcCopy">Copy registration link</button>
+          </div>
+          <p class="bc-note">Learn, connect with like-minded people and build the mindset and discipline required for exceptional leadership.</p>
+        </div>
+      </div>
+
+      <div class="bc-steps">
+        <div><span class="n">01</span><span><b>Register</b><p>Fill in a short form with your details. It takes about a minute.</p></span></div>
+        <div><span class="n">02</span><span><b>Join the WhatsApp community</b><p>You're taken straight to The Synergy Leadership Community after you submit.</p></span></div>
+        <div><span class="n">03</span><span><b>Get the Zoom link</b><p>Each day's link is posted in the community about 5 minutes before 8:00pm.</p></span></div>
+      </div>
+
+      <div class="spk-h"><h3>Speakers</h3><p>4–6 December 2026 · 8:00pm daily</p></div>
+      <div class="spk">
+        <figure class="sp"><img src="/img/sp-1.jpg" alt="Mfehe-Abasi Ekpe" width="320" height="320"><figcaption><small>Host</small><b>Mfehe-Abasi Ekpe</b><span>Director, The Synergy Leadership Academy and Excel Pips Academy</span></figcaption></figure>
+        <figure class="sp"><img src="/img/sp-2.jpg" alt="Rt. Hon. Tee Jerry Barifodum" width="320" height="320"><figcaption><small>Speaker</small><b>Rt. Hon. Tee Jerry Barifodum</b><span>Founder, LeadBeyond · Vice Stakeholders Chairman, AKSU SU 12th Tehila Republic</span></figcaption></figure>
+        <figure class="sp"><img src="/img/sp-3.jpg" alt="Eyakeno Samuel" width="320" height="320"><figcaption><small>Speaker</small><b>Eyakeno Samuel</b><span>Executive Virtual Assistant · Girls and Women Speak Ambassador</span></figcaption></figure>
+        <figure class="sp"><img src="/img/sp-4.jpg" alt="Saviour Edet" width="320" height="320"><figcaption><small>Speaker</small><b>Saviour Edet</b><span>Founder, Winbigteamtech · Virtual Assistant and Remote Worker</span></figcaption></figure>
+      </div>
+      <div class="powered">Powered by <span>LeadBeyond</span><span>Excel Pips Academy</span><span>Winbigteamtech</span></div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="sec" id="about" aria-labelledby="ab">
     <div class="wrap">
@@ -449,7 +653,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
           <div class="verbs"><span><small>01</small>Explore</span><span><small>02</small>Teach</span><span><small>03</small>Document</span><span><small>04</small>Share</span></div>
         </article>
         <figure class="pic">
-          <img src="img/community.jpg" alt="Young people listening attentively at a Synergy event" width="1080" height="720">
+          <img src="/img/community.jpg" alt="Young people listening attentively at a Synergy event" width="1080" height="720">
           <figcaption><span><b>Our community</b><span>Learning, connecting and growing together</span></span></figcaption>
         </figure>
       </div>
@@ -477,7 +681,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
   <section class="sec dir" id="director" aria-labelledby="dn">
     <div class="wrap">
       <figure class="dphoto">
-        <div class="ph"><img src="img/director.jpg" alt="Mfehe-Abasi Ekpe, Director of The Synergy Leadership Academy" width="720" height="1080" loading="lazy"></div>
+        <div class="ph"><img src="/img/director.jpg" alt="Mfehe-Abasi Ekpe, Director of The Synergy Leadership Academy" width="720" height="1080" loading="lazy"></div>
         <figcaption class="sig">
           <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9" r="6" stroke="#C0151F" stroke-width="2"/><path d="m8.5 13.5-1.5 8 5-2.5 5 2.5-1.5-8" stroke="#C0151F" stroke-width="2" stroke-linejoin="round"/></svg></span>
           <span><b>Most Outstanding Departmental President of the Year</b><span>Students' Union Government, Akwa Ibom State University</span></span>
@@ -519,9 +723,9 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
         <p>Honours received by the Director, and moments where he celebrated the people who serve alongside him.</p>
       </div>
       <div class="rgrid">
-        <figure class="rcard"><div class="im"><img src="img/r-1.jpg" alt="Mfehe-Abasi Ekpe receiving a framed Award of Excellence on stage" width="900" height="600" style="object-position:60% 40%"></div><figcaption><small>Honour</small><b>Award of Excellence</b><span>For outstanding leadership</span></figcaption></figure>
-        <figure class="rcard"><div class="im"><img src="img/r-2.jpg" alt="Mfehe-Abasi Ekpe holding a Merit Award" width="715" height="572"></div><figcaption><small>Honour</small><b>Merit Award</b><span>AKSU Students' Union Government</span></figcaption></figure>
-        <figure class="rcard"><div class="im"><img src="img/r-3.jpg" alt="Mfehe-Abasi Ekpe smiling with a framed certificate" width="715" height="584" style="object-position:50% 30%"></div><figcaption><small>Honour</small><b>Certificate of Honour</b><span>For service and contribution</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="/img/r-1.jpg" alt="Mfehe-Abasi Ekpe receiving a framed Award of Excellence on stage" width="900" height="600" style="object-position:60% 40%"></div><figcaption><small>Honour</small><b>Award of Excellence</b><span>For outstanding leadership</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="/img/r-2.jpg" alt="Mfehe-Abasi Ekpe holding a Merit Award" width="715" height="572"></div><figcaption><small>Honour</small><b>Merit Award</b><span>AKSU Students' Union Government</span></figcaption></figure>
+        <figure class="rcard"><div class="im"><img src="/img/r-3.jpg" alt="Mfehe-Abasi Ekpe smiling with a framed certificate" width="715" height="584" style="object-position:50% 30%"></div><figcaption><small>Honour</small><b>Certificate of Honour</b><span>For service and contribution</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -617,7 +821,8 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
         <div><a class="btn btn-line" href="https://wa.me/2349077601423" target="_blank" rel="noopener">Ask on WhatsApp <span class="arr" aria-hidden="true">→</span></a></div>
       </div>
       <div>
-        <details class="qa" open><summary>Who can join the academy?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Anyone who shares the vision: students, graduates, professionals, entrepreneurs, researchers, creatives and anyone passionate about leadership and personal development. People who have experienced what The Synergy stands for are especially welcome.</p></details>
+        <details class="qa" open><summary>How do I join the boot camp sessions?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Register for the boot camp, then join The Synergy Leadership Community on WhatsApp. You're taken there automatically after you register. The Zoom link for each day is posted in the community about 5 minutes before the 8:00pm session.</p></details>
+        <details class="qa"><summary>Who can join the academy?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Anyone who shares the vision: students, graduates, professionals, entrepreneurs, researchers, creatives and anyone passionate about leadership and personal development. People who have experienced what The Synergy stands for are especially welcome.</p></details>
         <details class="qa"><summary>Do I need experience?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">No. You don't need extensive experience. What matters most is your willingness to contribute, learn from others and work toward shared goals.</p></details>
         <details class="qa"><summary>What if I'm interested in more than one department?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Choose the one you'd most like to serve in, then mention the others in the "Anything else?" box on the form. It goes into your message automatically.</p></details>
         <details class="qa"><summary>How do I send my registration?<span class="pm" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p class="a">Fill in the form, choose WhatsApp or email, and tap Send. Your app opens with every detail already written. Press Send there to finish. You can also send your details yourself to 0907 760 1423 or thesynergyleadershipacademy@gmail.com.</p></details>
@@ -646,12 +851,12 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
 <footer class="foot">
   <div class="wrap">
     <div>
-      <img class="logo" src="img/logo-white.png" alt="The Synergy Leadership Academy" width="520" height="223">
+      <img class="logo" src="/img/logo-white.png" alt="The Synergy Leadership Academy" width="520" height="223">
       <p style="max-width:36ch">Building leaders. Sharing stories. Transforming lives.</p>
     </div>
     <div>
       <h4>Explore</h4>
-      <ul><li><a href="#about">About</a></li><li><a href="#departments">Departments</a></li><li><a href="#director">The Director</a></li><li><a href="#faq">FAQ</a></li><li><a href="#register">Register</a></li></ul>
+      <ul><li><a href="#bootcamp">Boot Camp</a></li><li><a href="#about">About</a></li><li><a href="#departments">Departments</a></li><li><a href="#director">The Director</a></li><li><a href="#faq">FAQ</a></li><li><a href="#register">Register</a></li></ul>
     </div>
     <div>
       <h4>Contact</h4>
@@ -660,6 +865,57 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
     <div class="copy"><span>© 2026 The Synergy Leadership Academy</span><span>More than a movement. A community. A vision. A legacy.</span></div>
   </div>
 </footer>
+
+<dialog class="modal" id="bcModal" aria-labelledby="bcTitle">
+  <div class="m-head">
+    <div><small>Boot Camp 2026</small><h2 id="bcTitle">Register for the Boot Camp</h2><p>4–6 December 2026 · Zoom · 8:00pm daily</p></div>
+    <button type="button" class="m-x" id="bcClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+  <div class="m-body">
+    <form id="bcForm" novalidate>
+      <div class="grid2">
+        <div class="f full" data-b="name"><label for="b_name">Full name</label><input id="b_name" type="text" autocomplete="name" placeholder="First and last name"><div class="err" id="be_name"></div></div>
+        <div class="f" data-b="sex"><span class="lbl" id="b_sexl">Sex</span><div class="seg" role="radiogroup" aria-labelledby="b_sexl"><input type="radio" name="b_sex" id="b_sm" value="Male"><label for="b_sm">Male</label><input type="radio" name="b_sex" id="b_sf" value="Female"><label for="b_sf">Female</label></div><div class="err" id="be_sex"></div></div>
+        <div class="f" data-b="nationality"><label for="b_nat">Nationality</label><input id="b_nat" type="text" autocomplete="country-name" placeholder="e.g. Nigerian" list="nats"><div class="err" id="be_nationality"></div></div>
+        <div class="f" data-b="relationship"><label for="b_rel">Relationship status</label><select id="b_rel"><option value="">Select</option><option>Single</option><option>Engaged</option><option>Married</option><option>Divorced</option><option>Widowed</option><option>Prefer not to say</option></select><div class="err" id="be_relationship"></div></div>
+        <div class="f" data-b="phone"><label for="b_phone">Phone number</label><input id="b_phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0803 123 4567"><div class="err" id="be_phone"></div></div>
+        <div class="f full" data-b="email"><label for="b_email">Email address <span class="opt">(optional)</span></label><input id="b_email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com"><div class="err" id="be_email"></div></div>
+        <div class="f full" data-b="state"><label for="b_state">State of residence</label><select id="b_state"><option value="">Select your state</option><option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT – Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option><option>Outside Nigeria</option></select><div class="err" id="be_state"></div></div>
+        <div class="f full" data-b="address"><label for="b_addr">Residential address</label><textarea id="b_addr" rows="2" autocomplete="street-address" placeholder="House number, street, town or city"></textarea><div class="err" id="be_address"></div></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="b_web">Website</label><input id="b_web" type="text" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" class="btn btn-red m-submit" id="bcSubmit">Register and join the community <span class="arr" aria-hidden="true">→</span></button>
+      <div class="m-err" id="bcErr" role="alert" hidden></div>
+      <p class="m-privacy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>Your details go only to The Synergy Leadership Academy and are used to organise the programme.</p>
+    </form>
+    <div class="m-done" id="bcDone" hidden>
+      <span class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <h3 id="bcDoneT">You're registered!</h3>
+      <p id="bcDoneP">One last step: join The Synergy Leadership Community on WhatsApp. The Zoom link for each day is shared there about 5 minutes before 8:00pm.</p>
+      <a class="btn btn-wa" id="bcWa" href="https://chat.whatsapp.com/LIGzx8hokXOAftVcuj8EYV"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>Join the WhatsApp community</a>
+      <p class="m-redirect" id="bcRedir">Opening WhatsApp in <b id="bcSec">5</b>s · <button type="button" id="bcStay">Stay on this page</button></p>
+    </div>
+  </div>
+</dialog>
+
+<div class="admin" id="admin" hidden>
+  <div class="admin-bar"><div class="wrap"><b>Boot Camp registrations</b><a href="/">Back to the website</a></div></div>
+  <div class="wrap">
+    <form class="admin-login" id="adLogin">
+      <h1>Admin access</h1>
+      <p>Enter the admin password to view registrations.</p>
+      <div class="f"><label for="adPw">Password</label><input id="adPw" type="password" autocomplete="current-password"></div>
+      <button type="submit" class="btn btn-navy" id="adGo">View registrations</button>
+      <div class="m-err" id="adErr" role="alert" hidden></div>
+    </form>
+    <div id="adData" hidden>
+      <div class="stats"><div><span>Total registrations</span><b id="stT">0</b></div><div><span>Female</span><b id="stF">0</b></div><div><span>Male</span><b id="stM">0</b></div><div><span>Registered today</span><b id="stD">0</b></div></div>
+      <div class="tools"><input type="search" id="adQ" placeholder="Search by name, phone, state…" aria-label="Search registrations"><button type="button" class="btn btn-line btn-sm" id="adRefresh">Refresh</button><button type="button" class="btn btn-red btn-sm" id="adCsv">Download for Excel (CSV)</button></div>
+      <div class="tbl"><table><thead><tr><th>#</th><th>Registered</th><th>Full name</th><th>Sex</th><th>Nationality</th><th>Relationship</th><th>Phone</th><th>Email</th><th>State</th><th>Residential address</th><th><span class="sr">Actions</span></th></tr></thead><tbody id="adRows"></tbody></table></div>
+      <p style="height:48px"></p>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -677,7 +933,7 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
   function fill(el, list){
     var html = "";
     for (var r = 0; r < 2; r++) list.forEach(function(p){
-      html += '<figure class="tile"' + (r ? ' aria-hidden="true"' : "") + '><img src="img/' + p[0] + '" alt="' + (r ? "" : p[3]) + '" width="' + p[1] + '" height="' + p[2] + '"><figcaption>' + p[3] + '</figcaption></figure>';
+      html += '<figure class="tile"' + (r ? ' aria-hidden="true"' : "") + '><img src="/img/' + p[0] + '" alt="' + (r ? "" : p[3]) + '" width="' + p[1] + '" height="' + p[2] + '"><figcaption>' + p[3] + '</figcaption></figure>';
     });
     el.innerHTML = html;
   }
@@ -809,6 +1065,229 @@ details.pv[open] summary .chev{transform:rotate(180deg)}
     ["sex","channel"].forEach(function(n){ if (d[n]) form.querySelectorAll('input[name="' + n + '"]').forEach(function(r){ if (r.value === d[n]) r.checked = true; }); });
   }
   restore(); setChannel(); update();
+})();
+// ---------- Boot camp registration ----------
+(function(){
+  var SITE = "https://synergy-leadership-academy.vercel.app";
+  var GROUP = "https://chat.whatsapp.com/LIGzx8hokXOAftVcuj8EYV";
+  var START = Date.parse("2026-12-04T20:00:00+01:00");
+  var END = Date.parse("2026-12-06T23:59:00+01:00");
+  var KEY = "tsla-bootcamp-2026";
+  var $ = function(s){ return document.querySelector(s); };
+  var modal = $("#bcModal"), form = $("#bcForm"), done = $("#bcDone"), btn = $("#bcSubmit"), err = $("#bcErr");
+  var timer = null;
+
+  function toast(t){ var el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(function(){ el.classList.remove("show"); }, 2200); }
+  function saved(){ try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch(_) { return null; } }
+
+  function open(){
+    var s = saved();
+    if (s) showDone(s.name, true, false);
+    if (modal.showModal) { if (!modal.open) modal.showModal(); } else modal.setAttribute("open", "");
+    if (!s) setTimeout(function(){ $("#b_name").focus(); }, 60);
+  }
+  function close(){
+    clearInterval(timer);
+    if (modal.close) modal.close(); else modal.removeAttribute("open");
+    if (/^\/(bootcamp|register)\/?$/.test(location.pathname)) history.replaceState(null, "", "/" + location.hash);
+  }
+  document.querySelectorAll("[data-open-bc]").forEach(function(el){
+    el.addEventListener("click", function(e){ e.preventDefault(); open(); });
+  });
+  $("#bcClose").addEventListener("click", close);
+  modal.addEventListener("cancel", function(e){ e.preventDefault(); close(); });
+  modal.addEventListener("click", function(e){ if (e.target === modal) close(); });
+
+  $("#bcCopy").addEventListener("click", function(){
+    var link = SITE + "/bootcamp";
+    function fb(){
+      var ta = document.createElement("textarea"); ta.value = link; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch(_){} ta.remove();
+      toast(ok ? "Registration link copied" : link);
+    }
+    try { navigator.clipboard.writeText(link).then(function(){ toast("Registration link copied"); }, fb); } catch(_) { fb(); }
+  });
+
+  // Countdown
+  function pad(n){ return String(n).padStart(2, "0"); }
+  function tick(){
+    var now = Date.now(), cd = $("#cd");
+    if (now >= START) {
+      cd.innerHTML = now <= END
+        ? '<span class="cd-live">Happening now · today’s Zoom link is in the WhatsApp community</span>'
+        : '<span class="cd-label">This boot camp has ended. Thank you for joining us.</span>';
+      return false;
+    }
+    var s = Math.floor((START - now) / 1000);
+    $("#cdD").textContent = Math.floor(s / 86400);
+    $("#cdH").textContent = pad(Math.floor(s % 86400 / 3600));
+    $("#cdM").textContent = pad(Math.floor(s % 3600 / 60));
+    $("#cdS").textContent = pad(s % 60);
+    return true;
+  }
+  if (tick()) var cdt = setInterval(function(){ if (!tick()) clearInterval(cdt); }, 1000);
+
+  // Form
+  var MSG = {
+    name: "Enter your full name, at least first and last name.",
+    sex: "Choose Male or Female.",
+    nationality: "Enter your nationality, for example Nigerian.",
+    relationship: "Choose your relationship status.",
+    phone: "Enter a phone number with at least 10 digits.",
+    email: "Check your email address, or leave it empty.",
+    state: "Choose your state of residence.",
+    address: "Enter your residential address."
+  };
+  function val(id){ return (document.getElementById(id).value || "").trim(); }
+  function data(){
+    var sx = form.querySelector('input[name="b_sex"]:checked');
+    return { name: val("b_name"), sex: sx ? sx.value : "", nationality: val("b_nat"), relationship: val("b_rel"),
+      phone: val("b_phone"), email: val("b_email"), state: val("b_state"), address: val("b_addr"), website: val("b_web") };
+  }
+  function check(k, d){
+    if (k === "name") return d.name.split(/\s+/).filter(Boolean).length >= 2;
+    if (k === "phone") { var n = d.phone.replace(/\D/g, "").length; return n >= 10 && n <= 15; }
+    if (k === "email") return !d.email || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email);
+    if (k === "address") return d.address.length >= 4;
+    return !!d[k];
+  }
+  function setErr(k, bad){
+    var f = form.querySelector('[data-b="' + k + '"]'); if (!f) return;
+    f.classList.toggle("bad", bad);
+    document.getElementById("be_" + k).textContent = bad ? MSG[k] : "";
+  }
+  form.addEventListener("input", function(e){ var f = e.target.closest("[data-b]"); if (f && f.classList.contains("bad") && check(f.dataset.b, data())) setErr(f.dataset.b, false); });
+  form.addEventListener("change", function(e){ var f = e.target.closest("[data-b]"); if (f && f.classList.contains("bad") && check(f.dataset.b, data())) setErr(f.dataset.b, false); });
+
+  function busy(on){
+    btn.disabled = on;
+    btn.innerHTML = on ? '<span class="spin" aria-hidden="true"></span>Saving your registration…' : 'Register and join the community <span class="arr" aria-hidden="true">→</span>';
+  }
+  function fail(d){
+    var text = "Hello, I would like to register for The Synergy Leadership Academy Boot Camp (4–6 Dec 2026).\n\nFull Name: " + d.name + "\nSex: " + d.sex + "\nNationality: " + d.nationality + "\nRelationship Status: " + d.relationship + "\nPhone Number: " + d.phone + "\nEmail: " + (d.email || "—") + "\nState: " + d.state + "\nResidential Address: " + d.address;
+    err.hidden = false;
+    err.innerHTML = "We couldn't save your registration. Check your internet connection and try again. If it keeps failing, <a href=\"https://wa.me/2349077601423?text=" + encodeURIComponent(text) + "\" target=\"_blank\" rel=\"noopener\">send your details on WhatsApp</a> instead.";
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = data(), first = null;
+    ["name","sex","nationality","relationship","phone","email","state","address"].forEach(function(k){
+      var good = check(k, d); setErr(k, !good); if (!good && !first) first = k;
+    });
+    if (first) {
+      var el = form.querySelector('[data-b="' + first + '"]');
+      el.scrollIntoView({ block: "center", behavior: "smooth" });
+      var inp = el.querySelector("input,select,textarea"); if (inp) setTimeout(function(){ inp.focus({ preventScroll: true }); }, 300);
+      return;
+    }
+    err.hidden = true; busy(true);
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var to = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 20000);
+    fetch("/api/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d), signal: ctrl ? ctrl.signal : undefined })
+      .then(function(r){ return r.json().catch(function(){ return { ok: false }; }); })
+      .then(function(res){
+        clearTimeout(to); busy(false);
+        if (res && res.ok) {
+          try { localStorage.setItem(KEY, JSON.stringify({ name: d.name, at: Date.now() })); } catch(_){}
+          showDone(d.name, !!res.duplicate, true);
+        } else if (res && res.error === "invalid" && res.fields) {
+          res.fields.forEach(function(k){ setErr(k, true); });
+        } else fail(d);
+      })
+      .catch(function(){ clearTimeout(to); busy(false); fail(d); });
+  });
+
+  function showDone(name, already, redirect){
+    var first = String(name || "").split(/\s+/)[0];
+    form.hidden = true; done.hidden = false;
+    $("#bcDoneT").textContent = already ? "You're already registered" + (first ? ", " + first : "") : "You're registered" + (first ? ", " + first : "") + "!";
+    $("#bcDoneP").textContent = already
+      ? "Your details are already with us. Join The Synergy Leadership Community on WhatsApp if you haven't yet. The Zoom link for each day is shared there about 5 minutes before 8:00pm."
+      : "One last step: join The Synergy Leadership Community on WhatsApp. The Zoom link for each day is shared there about 5 minutes before 8:00pm.";
+    var r = $("#bcRedir");
+    clearInterval(timer);
+    if (!redirect) { r.hidden = true; return; }
+    r.hidden = false;
+    var n = 5; $("#bcSec").textContent = n;
+    timer = setInterval(function(){
+      n--; $("#bcSec").textContent = Math.max(n, 0);
+      if (n <= 0) { clearInterval(timer); r.hidden = true; location.href = GROUP; }
+    }, 1000);
+  }
+  $("#bcStay").addEventListener("click", function(){ clearInterval(timer); $("#bcRedir").hidden = true; });
+
+  // Direct links: /bootcamp and /register open the form
+  if (/^\/(bootcamp|register)\/?$/.test(location.pathname) || location.hash === "#bootcamp-register") open();
+})();
+
+// ---------- Admin view (/admin) ----------
+(function(){
+  if (!/^\/admin\/?$/.test(location.pathname)) return;
+  var $ = function(s){ return document.querySelector(s); };
+  var panel = $("#admin"), rows = [], pw = "";
+  panel.hidden = false; document.body.classList.add("admin-open");
+  document.title = "Registrations · The Synergy Leadership Academy";
+  var m = document.createElement("meta"); m.name = "robots"; m.content = "noindex"; document.head.appendChild(m);
+  setTimeout(function(){ $("#adPw").focus(); }, 50);
+
+  var COLS = [["registeredAt","Registered at"],["name","Full name"],["sex","Sex"],["nationality","Nationality"],["relationship","Relationship status"],["phone","Phone number"],["email","Email address"],["state","State"],["address","Residential address"]];
+  function when(iso){
+    try { return new Date(iso).toLocaleString("en-GB", { timeZone: "Africa/Lagos", day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }); } catch(_) { return iso || ""; }
+  }
+  function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  function load(){
+    var go = $("#adGo"), e = $("#adErr");
+    go.disabled = true; go.textContent = "Loading…"; e.hidden = true;
+    return fetch("/api/registrations", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: pw }) })
+      .then(function(r){ return r.json().then(function(j){ return { status: r.status, j: j }; }); })
+      .then(function(x){
+        go.disabled = false; go.textContent = "View registrations";
+        if (x.status === 401) { e.hidden = false; e.textContent = "That password isn't right. Try again."; $("#adPw").select(); return; }
+        if (!x.j.ok) throw new Error();
+        rows = x.j.rows || [];
+        $("#adLogin").hidden = true; $("#adData").hidden = false;
+        render();
+      })
+      .catch(function(){ go.disabled = false; go.textContent = "View registrations"; e.hidden = false; e.textContent = "Couldn't load registrations. Check your connection and try again."; });
+  }
+  function render(){
+    var q = ($("#adQ").value || "").toLowerCase().trim();
+    var list = rows.filter(function(r){ return !q || COLS.some(function(c){ return String(r[c[0]] || "").toLowerCase().indexOf(q) > -1; }); });
+    var today = new Date().toLocaleDateString("en-GB", { timeZone: "Africa/Lagos" });
+    $("#stT").textContent = rows.length;
+    $("#stF").textContent = rows.filter(function(r){ return r.sex === "Female"; }).length;
+    $("#stM").textContent = rows.filter(function(r){ return r.sex === "Male"; }).length;
+    $("#stD").textContent = rows.filter(function(r){ try { return new Date(r.registeredAt).toLocaleDateString("en-GB", { timeZone: "Africa/Lagos" }) === today; } catch(_) { return false; } }).length;
+    $("#adRows").innerHTML = list.length ? list.map(function(r, i){
+      return "<tr><td class=\"n\">" + (i + 1) + "</td><td class=\"nw\">" + esc(when(r.registeredAt)) + "</td><td class=\"nw\"><b>" + esc(r.name) + "</b></td><td>" + esc(r.sex) + "</td><td>" + esc(r.nationality) + "</td><td>" + esc(r.relationship) + "</td><td class=\"nw\">" + esc(r.phone) + "</td><td>" + esc(r.email) + "</td><td class=\"nw\">" + esc(r.state) + "</td><td>" + esc(r.address) + "</td><td><button type=\"button\" class=\"del\" data-id=\"" + esc(r.id) + "\" data-name=\"" + esc(r.name) + "\">Delete</button></td></tr>";
+    }).join("") : "<tr><td colspan=\"11\" class=\"empty\">" + (rows.length ? "No registrations match your search." : "No registrations yet. They'll appear here as people sign up.") + "</td></tr>";
+  }
+  $("#adLogin").addEventListener("submit", function(e){ e.preventDefault(); pw = $("#adPw").value; if (pw) load(); });
+  $("#adQ").addEventListener("input", render);
+  $("#adRows").addEventListener("click", function(e){
+    var b = e.target.closest(".del"); if (!b) return;
+    if (!window.confirm("Delete the registration for " + b.dataset.name + "? This can't be undone.")) return;
+    b.disabled = true; b.textContent = "Deleting…";
+    fetch("/api/registrations", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: pw, action: "delete", id: b.dataset.id }) })
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if (!j.ok) throw new Error(); rows = rows.filter(function(r){ return r.id !== b.dataset.id; }); render(); })
+      .catch(function(){ b.disabled = false; b.textContent = "Delete"; alert("Couldn't delete that registration. Try again."); });
+  });
+  $("#adRefresh").addEventListener("click", function(){ load(); });
+  $("#adCsv").addEventListener("click", function(){
+    function cell(v){ var s = String(v == null ? "" : v); if (/^[=+\-@]/.test(s)) s = "'" + s; return '"' + s.replace(/"/g, '""') + '"'; }
+    var lines = [COLS.map(function(c){ return cell(c[1]); }).join(",")].concat(rows.map(function(r){
+      return COLS.map(function(c){ return cell(c[0] === "registeredAt" ? when(r.registeredAt) : r[c[0]]); }).join(",");
+    }));
+    var blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "synergy-bootcamp-registrations-" + new Date().toISOString().slice(0, 10) + ".csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+  });
 })();
 </script>
 
